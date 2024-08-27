@@ -7,24 +7,24 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model movies {
-  id           Int     @id @default(autoincrement())
+model Movie {
+  id           Int     @id(map: "movies_pkey") @default(autoincrement())
   title        String  @db.VarChar(255)
   description  String?
   director     String? @db.VarChar(50)
   release_year Int?
 }
 
-model roles {
-  id        Int     @id @default(autoincrement())
-  role_name String  @db.VarChar(50)
-  users     users[]
+model Role {
+  id        Int    @id(map: "roles_pkey") @default(autoincrement())
+  role_name String @db.VarChar(50)
+  User      User[]
 }
 
-model users {
-  id       Int    @id @default(autoincrement())
-  name     String @unique @db.VarChar(50)
+model User {
+  id       Int    @id(map: "users_pkey") @default(autoincrement())
+  name     String @unique(map: "users_name_key") @db.VarChar(50)
   password String @db.VarChar(255)
   role_id  Int
-  roles    roles  @relation(fields: [role_id], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  Role     Role   @relation(fields: [role_id], references: [id], onDelete: NoAction, onUpdate: NoAction, map: "users_role_id_fkey")
 }
