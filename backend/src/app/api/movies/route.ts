@@ -74,3 +74,28 @@ export async function DELETE (req:NextRequest){
         return NextResponse.json({ message: 'Could not delete movie' }, { status: 500 }); // impossibilité de supprimer un film 
     }
 }
+
+// Gestion de la function UPDATE
+export async function PUT (req:NextRequest){
+    try {
+        console.log('Handling PUT request:', req.url);
+        const url = new URL(req.url); //pour creer une instance de l'URL de la requête
+        const id = url.searchParams.get('id'); // Récupère le paramètre 'id' de l'URL
+        if(id){
+            // Si l'ID est présent dans l'URL
+            const movieId = parseInt(id); // conversion de l'ID en nombre
+            if(isNaN(movieId)){ //si movieId n'est n'est un nombre
+                return NextResponse.json({message: 'Invalid ID'}, {status:400})
+            }
+            const data = await req.json(); // Récupérer les données de la requête
+            console.log('Updating movie with data:', data);
+            const updateMovie = await MovieService.updateMovie(movieId,data);
+            return NextResponse.json(updateMovie, {status: 200});
+        }else {
+            return NextResponse.json({message:'ID id required'}, {status: 400})
+        }
+    }catch(error){
+        console.error('Error creating movie:', error);
+        return NextResponse.json({ message: 'Could not delete movie' }, { status: 500 }); // impossibilité de supprimer un film 
+    }
+}

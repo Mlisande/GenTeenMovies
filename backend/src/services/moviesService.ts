@@ -23,26 +23,36 @@ export class MovieService {
             throw new Error('Could not create movie');
         }
     }
-
     static async getMovieById(id:number){
         try {
             return await prisma.movie.findUnique({where : {id}});
         }catch (error) {
-            console.error('Errir fetching movie by id');
+            console.error('Error fetching movie by id');
             throw new Error ('Could not fetch movie')
         }
     }
-
     static async deleteMovie(id:number){
         try{
             return await prisma.movie.delete({where:{id}});
         } catch (error){
-            console.error('Errir fetching movie by id');
-            throw new Error ('Could not delte movie');
+            console.error('Error deleting movie');
+            throw new Error ('Could not delete movie');
         }
-
     }
-        
+    static async updateMovie(id:number, data: {title?: string, description?: string, director?: string, releaseYear?: number}){
+        try{
+            console.log('Updating movie with ID:', id, 'with data:', data);
+            const updatedMovie = await prisma.movie.update({
+                where: { id }, // Identification du film à mettre à jour
+                data           // Données à mettre à jour
+            });
+            console.log('Movie updated:', updatedMovie);
+            return updatedMovie;
+        }catch (error){
+            console.error('Error updating movie by id');
+            throw new Error ('Could not update movie');
+        }   
+    }
 };
 
 
