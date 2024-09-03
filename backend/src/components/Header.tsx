@@ -1,7 +1,7 @@
 import React from 'react';
 import { AppBar, Button, Tab, Tabs, Toolbar, Typography } from '@mui/material';
 
-const Header = () => {
+const Header: React.FC = () =>{ // React.FC est ici le type. C'est un type de React pour functional component
     return (
         <AppBar sx={{backgroundColor:'#f2f35d'}}>
             <Toolbar>
@@ -34,3 +34,4 @@ const Header = () => {
 };
 
 export default Header;
+

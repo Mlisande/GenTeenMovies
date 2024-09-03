@@ -1,17 +1,11 @@
+import React from "react";
 import Image from "next/image";
 import styles from "../styles/page.module.css";
-import Header from "@/components/Header";
-import * as React from 'react';
-import Stack from '@mui/material/Stack';
-import Button from '@mui/material/Button';
-import { Box, Container } from "@mui/material";
-import Footer from "@/components/Footer";
 
 
 export default function Home() {
   return (
     <>
-      <Header/>
     <main className={styles.main}>
       <div className={styles.description}>
         <p>
@@ -100,7 +94,6 @@ export default function Home() {
         </a>
       </div>
     </main>
-    <Footer/>
     </>
   );
 }

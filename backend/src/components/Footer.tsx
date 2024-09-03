@@ -1,21 +1,21 @@
 import React from 'react';
-import { Box, Container, Grid2, Typography } from '@mui/material';
+import { Box,Grid2, Typography } from '@mui/material';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 
-const Footer = () => {
+const Footer: React.FC = () =>{
     return (
         <Box
             sx={{
                 width: "100%",
                 height: "auto",
                 backgroundColor:'#f2f35d',
-                paddingTop: "1rem",
-                paddingBottom: "1rem",
+                // paddingTop: "1rem",
+                // paddingBottom: "1rem",
                 display:'flex',
                 alignItems:'center',
                 justifyContent:'center'
             }}
-    >
+        >
         <Grid2 container direction="column">
           <Grid2 size={12}>
             <Typography color="black" variant="h5">
