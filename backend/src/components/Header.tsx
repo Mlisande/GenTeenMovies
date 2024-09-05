@@ -3,9 +3,9 @@ import { AppBar, Button, Tab, Tabs, Toolbar, Typography } from '@mui/material';
 
 const Header: React.FC = () =>{ // React.FC est ici le type. C'est un type de React pour functional component
     return (
-        <AppBar sx={{backgroundColor:'#f2f35d'}}>
+        <AppBar position='sticky'>
             <Toolbar>
-                <Typography variant='h5' component='h1' 
+                <Typography variant='h5' component='h1' fontWeight={700}
                     sx={{ flexGrow: 1, color: "#000000" }}>
                         GENTEENMOVIES
                 </Typography>

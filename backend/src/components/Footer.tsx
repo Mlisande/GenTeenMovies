@@ -1,19 +1,19 @@
 import React from 'react';
-import { Box,Grid2, Typography } from '@mui/material';
+import { AppBar, Box,Grid2, Typography } from '@mui/material';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 
 const Footer: React.FC = () =>{
     return (
-        <Box
+        <AppBar
             sx={{
                 width: "100%",
                 height: "auto",
-                backgroundColor:'#f2f35d',
-                // paddingTop: "1rem",
-                // paddingBottom: "1rem",
+                backgroundColor:'#fefcf8',
                 display:'flex',
                 alignItems:'center',
-                justifyContent:'center'
+                justifyContent:'center',
+                top:'auto',
+                bottom:'0'
             }}
         >
         <Grid2 container direction="column">
@@ -31,7 +31,7 @@ const Footer: React.FC = () =>{
             </Typography>
           </Grid2>
         </Grid2>
-    </Box>
+    </AppBar>
     );
 };
 
