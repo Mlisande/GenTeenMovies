@@ -8,7 +8,7 @@ import GenTeenCineClub from '../app/images/GenTeenCineClub.png'
 export default function Home() {
   return (
     <>
-    <main style={{
+    <main style={{ // style de page.module.css 
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'space-between',
