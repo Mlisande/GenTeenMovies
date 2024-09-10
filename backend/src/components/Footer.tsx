@@ -1,37 +1,40 @@
 import React from 'react';
-import { Box,Grid2, Typography } from '@mui/material';
+import { AppBar, Box,Grid2, Typography } from '@mui/material';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 
 const Footer: React.FC = () =>{
     return (
-        <Box
+        <AppBar
             sx={{
                 width: "100%",
                 height: "auto",
-                backgroundColor:'#f2f35d',
-                // paddingTop: "1rem",
-                // paddingBottom: "1rem",
+                backgroundColor:'background.default',
                 display:'flex',
                 alignItems:'center',
-                justifyContent:'center'
+                justifyContent:'center',
+                top:'auto',
+                bottom:'0',
+                padding:'1rem',
             }}
         >
-        <Grid2 container direction="column">
+        <Grid2 container direction="column" spacing={1} alignItems="center">
           <Grid2 size={12}>
-            <Typography color="black" variant="h5">
+            <Typography color="text.primary" variant="h5" fontWeight={400} >
               GENTENNMOVIES
             </Typography>
           </Grid2>
           <Grid2 size={12}>
-            <Typography color="textSecondary" variant="subtitle1">
+            <Typography variant="subtitle1">
               {`${new Date().getFullYear()} | React | Material UI | React Router`}
             </Typography>
-            <Typography color="textSecondary" variant="subtitle1">
-                made with <FavoriteIcon sx={{ color: '#a61e1e',fontSize:"small" }}/> by Mélisande MALONGA
+            <Typography variant="subtitle1">
+                made with 
+                <FavoriteIcon sx={{ color: '#a61e1e',fontSize:"small" }}/> 
+                by Mélisande MALONGA
             </Typography>
           </Grid2>
         </Grid2>
-    </Box>
+    </AppBar>
     );
 };
 
