@@ -1,5 +1,6 @@
 import React from 'react';
 import { AppBar, Button, Tab, Tabs, Toolbar, Typography } from '@mui/material';
+import Link from "next/link";
 
 const Header: React.FC = () =>{ // React.FC est ici le type. C'est un type de React pour functional component
     return (
@@ -10,7 +11,9 @@ const Header: React.FC = () =>{ // React.FC est ici le type. C'est un type de Re
                         GENTEENMOVIES
                 </Typography>
                 <Tabs>
+                    <Link href="/gallery" passHref>
                     <Tab label='Gallery' sx={{color:'text.primary', fontWeight:'300'}}></Tab>
+                    </Link>
                     <Tab label='Quizz' sx={{color:'text.primary', fontWeight:'300'}}></Tab>   
                 </Tabs>
                 <Button 
