@@ -1,7 +1,5 @@
 import React from "react";
 import Image from "next/image";
-import styles from "../styles/page.module.css";
-import Panel from "@/components/Panel";
 import { Grid2,Typography, Button} from "@mui/material";
 import GenTeenCineClub from '../app/images/GenTeenCineClub.png'
 
