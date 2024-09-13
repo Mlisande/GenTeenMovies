@@ -3,9 +3,9 @@
 import React, { useState, useEffect } from "react";
 import { Grid2, Typography} from "@mui/material";
 import MovieCard from "@/components/MovieCard";
-import { Movie } from "@/interfaces/Movie";
+import Movie from "@/interfaces/Movie";
 
-export default function Gallery() {
+const Gallery : React.FC = ()=> {
     // État pour stocker les films récupérés depuis l'API
   const [movies, setMovies] = useState<Movie[]>([]);// movies = la variable d'état. Elle va stocker la liste de film récupérée de l'API. Elle est de type Movie[], et [] est la valeur attendue, ici un tableau vide 
 
@@ -49,3 +49,5 @@ export default function Gallery() {
     
   );
 }
+
+export default Gallery;
