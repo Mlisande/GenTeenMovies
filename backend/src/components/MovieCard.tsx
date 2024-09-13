@@ -1,6 +1,6 @@
 import React from "react";
 import { Card, CardContent, Typography } from "@mui/material";
-import { Movie } from "@/interfaces/Movie";
+import Movie from "@/interfaces/Movie";
 
 interface MovieCardProps {
     movie: Movie;

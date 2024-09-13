@@ -3,7 +3,8 @@ import Image from "next/image";
 import { Grid2,Typography, Button} from "@mui/material";
 import GenTeenCineClub from '../app/images/GenTeenCineClub.png'
 
-export default function Home() {
+
+const Home:React.FC=() =>{
   return (
     <>
     <main style={{ // style de page.module.css 
@@ -47,4 +48,6 @@ export default function Home() {
     </>
   );
 }
+
+export default Home;
 
