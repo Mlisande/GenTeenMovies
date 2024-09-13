@@ -4,7 +4,7 @@ import FavoriteIcon from '@mui/icons-material/Favorite';
 
 const Footer: React.FC = () =>{
     return (
-        <AppBar
+        <AppBar position='sticky'
             sx={{
                 width: "100%",
                 height: "auto",

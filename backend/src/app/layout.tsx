@@ -6,7 +6,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import '../styles/globals.css';
 import { ThemeProvider, CssBaseline } from "@mui/material";
-import {Roboto} from '@next/font/google'
+import {Roboto} from 'next/font/google'
 import theme from "@/styles/theme";
 
 const roboto = Roboto({

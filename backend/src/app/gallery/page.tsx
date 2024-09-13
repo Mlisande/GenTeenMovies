@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState, useEffect } from "react";
-import { Grid2, Typography } from "@mui/material";
+import { Grid2, Typography} from "@mui/material";
 import MovieCard from "@/components/MovieCard";
 import { Movie } from "@/interfaces/Movie";
 
@@ -46,5 +46,6 @@ export default function Gallery() {
         ))}
       </Grid2>
     </main>
+    
   );
 }
