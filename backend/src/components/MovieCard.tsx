@@ -8,9 +8,9 @@ interface MovieCardProps {
 
 const MovieCard: React.FC<MovieCardProps> = ({ movie }) => {
     return (
-      <Card>
+      <Card sx={{backgroundColor:"primary.light"}}>
         <CardContent>
-          <Typography variant="h6" component="div">
+          <Typography variant="h5" component="div" >
             {movie.title}
           </Typography>
           <Typography color="text.secondary">
@@ -18,9 +18,6 @@ const MovieCard: React.FC<MovieCardProps> = ({ movie }) => {
           </Typography>
           <Typography variant="body2">
             Directed by: {movie.director}
-          </Typography>
-          <Typography variant="body1">
-            {movie.description}
           </Typography>
         </CardContent>
       </Card>

@@ -3,12 +3,12 @@ import { createTheme } from "@mui/material";
 const theme = createTheme({
     palette: {
       primary: {
-        main: '#2a8e5c', // vert foncé
-        light:'#5abf89',
-        dark:'#1e6f47'
+        main: 'rgba(42, 142, 92, 0.3)', // vert foncé
+        light :'rgba(90, 191, 137, 0.2)',
+        dark:'rgba(30, 111, 71, 0.3)',
       },
       secondary: {
-        main: '#ffbbf5', // rose
+        main: 'rgba(255, 187, 245, 0.3)', // rose
         light:'#ffd7fa',
         dark:'#e38bc3'
       },

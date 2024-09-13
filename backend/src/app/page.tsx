@@ -28,7 +28,7 @@ export default function Home() {
           <Button
             variant="contained"
             color="primary"
-            sx={{ width: '200px', fontSize: '16px', backgroundColor:'secondary.light', color:'#000000' }}
+            sx={{ width: '200px', fontSize: '16px', backgroundColor:'secondary.main', color:'#000000' }}
           >
             Visit our gallery
           </Button>
