@@ -35,7 +35,10 @@ const Gallery : React.FC = ()=> {
         padding: '1rem',
         minHeight: '80vh',
     }}>
-      <Typography variant="h3" marginBottom={2}>
+      <Typography variant="h5" marginBottom={2} sx={{color:"secondary.dark"}}>
+        What's in our bag ?
+      </Typography>
+      <Typography variant="h1" marginBottom={8}>
         Movie Gallery
       </Typography>
       <Grid2 container spacing={4}>

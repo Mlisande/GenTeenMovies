@@ -13,14 +13,15 @@ const Header: React.FC = () =>{ // React.FC est ici le type. C'est un type de Re
     return (
         <AppBar position='sticky' sx={{backgroundColor:"background.default"}} >
             <Toolbar>
-                <Typography variant='h5' component='h1'  
+                <Typography variant='h2' component='h1'  
                     sx={{ flexGrow: 1, color:'text.primary' }}>
                         GENTEENMOVIES
                 </Typography>
-                <Tabs value={value}>
-                   <Tab label='Gallery' value='gallery' component={Link}  href="/gallery"sx={{color:'text.primary', fontWeight:'300'}}></Tab>
-                    <Tab label='Quizz' value='quizz' sx={{color:'text.primary', fontWeight:'300'}}></Tab>   
-                </Tabs>
+                {/* <Tabs value={value}>
+                   <Tab label='Gallery' value='gallery' component={Link} href="/gallery">   
+                    </Tab>
+                    <Tab label='Quizz' value='quizz' ></Tab>   
+                </Tabs> */}
                 <Button 
                     variant='contained' 
                     sx={{

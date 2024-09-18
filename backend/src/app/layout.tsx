@@ -6,11 +6,11 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import '../styles/globals.css';
 import { ThemeProvider, CssBaseline } from "@mui/material";
-import {Roboto} from 'next/font/google'
+import {Poppins} from 'next/font/google'
 import theme from "@/styles/theme";
 
-const roboto = Roboto({
-  weight:['300','400','700','900'],
+const poppins = Poppins({
+  weight:['100','200','300','400','500','600'],
   subsets: ["latin"]
 })
 
@@ -22,7 +22,7 @@ const RootLayout:React.FC<RootLayoutProps>=({
   children}) =>{
   return (
     <html lang="en">
-      <body className={roboto.className}>
+      <body className={poppins.className}>
         <ThemeProvider theme={theme}>
           <CssBaseline />
           <Header/>
