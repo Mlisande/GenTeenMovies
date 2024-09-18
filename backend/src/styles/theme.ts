@@ -22,20 +22,36 @@ const theme = createTheme({
       },
     },
     typography: {
-      fontFamily: "'Roboto', sans-serif", // Police par défaut
-      h5: {
-        fontWeight: 700,
+      fontFamily: "'Poppins', sans-serif", // Police par défaut
+      h1: {
+        fontWeight: 500,
+        fontSize: '2.5rem', // 
+      },
+      h2: {
+        fontWeight: 500,
+        fontSize: '2rem', // Sous-titres
+      },
+      h3: {
+        fontWeight: 500,
         fontSize: '1.5rem', // 
       },
-      h6: {
-        fontWeight: 400,
+      h4: {
+        fontWeight: 500,
         fontSize: '1.2rem', // Sous-titres
+      },
+      h5: {
+        fontWeight: 500,
+        fontSize: '1rem',
+      },
+      h6: {
+        fontWeight: 500,
+        fontSize: '.8rem', // Sous-titres
       },
       subtitle1: {
         color: '#6c757d', // Couleur des sous-titres dans le footer
       },
       button: {
-        fontWeight: 700,
+        fontWeight: 600,
       },
     },
   });
