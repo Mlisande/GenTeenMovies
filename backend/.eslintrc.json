@@ -1,3 +1,21 @@
 {
-  "extends": "next/core-web-vitals"
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "extends": [
+    "next/core-web-vitals",
+    "next/typescript",
+    "plugin:react/recommended", // Règles pour React
+    "plugin:react-hooks/recommended", // Règles pour les hooks React (useState, useEffect, etc.)"
+    "plugin:prettier/recommended"
+  ],
+  "rules": {
+    "prettier/prettier": "error", // Les erreurs de Prettier sont signalées comme des erreurs ESLint
+    "semi": ["error", "always"], // Force l’utilisation des points-virgules
+    "quotes": ["error", "single"], // Force l’utilisation des guillemets simples
+    "@typescript-eslint/no-unused-vars": "warn", // Avertissement pour les variables inutilisées
+    "react/react-in-jsx-scope": "off", // Désactive l'import React explicite (Next.js n'en a pas besoin)
+    "react/no-unescaped-entities": "off" // Désactive l'utilisation de caractères spéciaux échappés
+  }
 }

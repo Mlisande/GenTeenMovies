@@ -1,10 +1,10 @@
-import React from "react";
-import { Box } from "@mui/material";
+import React from 'react';
+import { Box } from '@mui/material';
 
 export interface PanelProps {
-    children: React.ReactNode;
-  }
-  
+  children: React.ReactNode;
+}
+
 const Panel: React.FC<PanelProps> = ({ children }) => {
   return (
     <Box
@@ -14,14 +14,14 @@ const Panel: React.FC<PanelProps> = ({ children }) => {
         borderRadius: '10px',
         textAlign: 'center',
         //maxWidth: '600px',
-        width:'80%',
-        height:'65vh',
+        width: '80%',
+        height: '65vh',
         boxShadow: '15px 10px 1px rgb(238, 145, 223)',
       }}
     >
       {children}
     </Box>
-    );
-  };
-  
-  export default Panel;
+  );
+};
+
+export default Panel;
