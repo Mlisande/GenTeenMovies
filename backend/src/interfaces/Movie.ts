@@ -5,4 +5,4 @@ export default interface Movie {
   description?: string;
   director?: string;
   release_year?: number;
-}
+};

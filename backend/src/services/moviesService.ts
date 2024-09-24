@@ -32,7 +32,7 @@ export class MovieService {
     try {
       return await prisma.movie.findUnique({ where: { id } });
     } catch (error) {
-      console.error('Error fetching movie by id');
+      console.error('Error fetching movie by id', error);
       throw new Error('Could not fetch movie');
     }
   }
@@ -40,7 +40,7 @@ export class MovieService {
     try {
       return await prisma.movie.delete({ where: { id } });
     } catch (error) {
-      console.error('Error deleting movie');
+      console.error('Error deleting movie', error);
       throw new Error('Could not delete movie');
     }
   }
@@ -62,7 +62,7 @@ export class MovieService {
       console.log('Movie updated:', updatedMovie);
       return updatedMovie;
     } catch (error) {
-      console.error('Error updating movie by id');
+      console.error('Error updating movie by id', error);
       throw new Error('Could not update movie');
     }
   }

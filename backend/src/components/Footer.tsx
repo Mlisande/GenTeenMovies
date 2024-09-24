@@ -1,5 +1,5 @@
 import React from 'react';
-import { AppBar, Box, Grid2, Typography } from '@mui/material';
+import { AppBar, Grid2, Typography } from '@mui/material';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 
 const Footer: React.FC = () => {

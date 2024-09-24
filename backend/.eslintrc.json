@@ -14,7 +14,7 @@
     "prettier/prettier": "error", // Les erreurs de Prettier sont signalées comme des erreurs ESLint
     "semi": ["error", "always"], // Force l’utilisation des points-virgules
     "quotes": ["error", "single"], // Force l’utilisation des guillemets simples
-    "@typescript-eslint/no-unused-vars": "warn", // Avertissement pour les variables inutilisées
+    "@typescript-eslint/no-unused-vars": "off", // Avertissement pour les variables inutilisées
     "react/react-in-jsx-scope": "off", // Désactive l'import React explicite (Next.js n'en a pas besoin)
     "react/no-unescaped-entities": "off" // Désactive l'utilisation de caractères spéciaux échappés
   }
