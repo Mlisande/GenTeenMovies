@@ -2,30 +2,31 @@ import React, { useState } from 'react';
 import { Button, Tab, Tabs, Toolbar, Typography } from '@mui/material';
 import AppBar from '@mui/material/AppBar';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 
 const Header: React.FC = () => {
   // React.FC est ici le type. C'est un type de React pour functional component
 
-  const [value, setValue] = useState('gallery'); // Définir "gallery" comme l'onglet par défaut
-
-  const handleChange = (event: React.SyntheticEvent, newValue: string) => {
-    setValue(newValue); // Mettre à jour la valeur de l'onglet sélectionné
-  };
+  const router = useRouter(); // j'installe le hook useRouter ici
   return (
     <AppBar position="sticky" sx={{ backgroundColor: 'background.default' }}>
       <Toolbar>
         <Typography
           variant="h2"
           component="h1"
-          sx={{ flexGrow: 1, color: 'text.primary' }}
+          onClick={() => router.push('/')}
+          sx={{ flexGrow: 1, color: 'text.primary', cursor: 'pointer' }}
         >
           GENTEENMOVIES
         </Typography>
-        {/* <Tabs value={value}>
-                   <Tab label='Gallery' value='gallery' component={Link} href="/gallery">   
-                    </Tab>
-                    <Tab label='Quizz' value='quizz' ></Tab>   
-                </Tabs> */}
+        <Tabs>
+          <Tab
+            label="Gallery"
+            value="gallery"
+            onClick={() => router.push('/gallery')}
+          ></Tab>
+          <Tab label="Quizz" value="quizz"></Tab>
+        </Tabs>
         <Button
           variant="contained"
           sx={{
