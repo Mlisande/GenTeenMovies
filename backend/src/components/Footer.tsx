@@ -30,7 +30,7 @@ const Footer: React.FC = () => {
             <Typography variant="subtitle1">
               {`${new Date().getFullYear()} | Nextjs | React | Typescript| PostgreSQL | Material UI`}
             </Typography>
-            <Typography variant="h5">
+            <Typography variant="h5" sx={{ color: 'text.secondary' }}>
               made with{' '}
               <FavoriteIcon sx={{ color: '#a61e1e', fontSize: 'medium' }} /> by
               &copy; Mélisande MALONGA

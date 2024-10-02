@@ -1,7 +1,6 @@
 'use client';
-
 import React, { useState, useEffect } from 'react';
-import { Grid2, Typography } from '@mui/material';
+import { Container, Grid2, Typography } from '@mui/material';
 import MovieCard from '@/components/MovieCard';
 import Movie from '@/interfaces/Movie';
 
@@ -29,23 +28,20 @@ const Gallery: React.FC = () => {
   }, []);
 
   return (
-    <main
-      style={{
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-        padding: '1rem',
-        minHeight: '80vh',
-      }}
+    <Container
+      component="main"
+      maxWidth="xl"
+      sx={{ marginBottom: '5rem', marginTop: '2rem' }}
     >
       <Typography
         variant="h5"
-        marginBottom={2}
-        sx={{ color: 'secondary.dark' }}
+        marginBottom="2rem"
+        align="center"
+        sx={{ color: 'primary.main' }}
       >
         What's in our bag ?
       </Typography>
-      <Typography variant="h1" marginBottom={8}>
+      <Typography variant="h1" marginBottom="4rem" align="center">
         Movie Gallery
       </Typography>
       <Grid2 container spacing={4}>
@@ -55,7 +51,7 @@ const Gallery: React.FC = () => {
           </Grid2>
         ))}
       </Grid2>
-    </main>
+    </Container>
   );
 };
 

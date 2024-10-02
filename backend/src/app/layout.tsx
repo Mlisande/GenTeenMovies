@@ -21,11 +21,14 @@ type RootLayoutProps = {
 const RootLayout: React.FC<RootLayoutProps> = ({ children }) => {
   return (
     <html lang="en">
-      <body className={poppins.className}>
+      <body
+        className={poppins.className}
+        style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}
+      >
         <ThemeProvider theme={theme}>
           <CssBaseline />
           <Header />
-          <main>{children}</main>
+          <main style={{ flex: '1' }}>{children}</main>
           <Footer />
         </ThemeProvider>
       </body>
