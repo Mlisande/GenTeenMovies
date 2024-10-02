@@ -38,6 +38,7 @@ const Header: React.FC = () => {
         </Button>
         <Button
           variant="contained"
+          onClick={() => router.push('/signup')}
           sx={{
             marginLeft: '10px',
             backgroundColor: 'text.primary',
