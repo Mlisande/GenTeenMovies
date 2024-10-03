@@ -1,6 +1,13 @@
 'use client';
 import React, { useState } from 'react';
-import { Button, TextField, Typography, Container, Link } from '@mui/material';
+import {
+  Box,
+  Button,
+  TextField,
+  Typography,
+  Container,
+  Link,
+} from '@mui/material';
 import axios from 'axios';
 import logo from '../assets/img/logo_trans.png'; // Assure-toi que le chemin est correct
 import { useRouter } from 'next/navigation';
@@ -24,7 +31,7 @@ const SignupForm: React.FC = () => {
       >
         Already have an account? Login here.
       </Typography>
-      <form style={{ width: '100%', marginTop: '10px' }}>
+      <Box component="form" sx={{ width: '100', marginTop: '10px' }}>
         <TextField
           variant="outlined"
           margin="normal"
@@ -54,11 +61,11 @@ const SignupForm: React.FC = () => {
           variant="contained"
           color="primary"
           fullWidth
-          style={{ marginTop: '20px' }}
+          sx={{ marginTop: '20px' }}
         >
           Sign up
         </Button>
-      </form>
+      </Box>
     </Container>
   );
 };

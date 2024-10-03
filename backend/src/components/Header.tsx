@@ -29,6 +29,7 @@ const Header: React.FC = () => {
         </Tabs>
         <Button
           variant="contained"
+          onClick={() => router.push('/login')}
           sx={{
             marginLeft: 'auto',
             backgroundColor: 'text.primary',
