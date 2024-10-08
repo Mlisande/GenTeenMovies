@@ -24,6 +24,7 @@ model Role {
 model User {
   id       Int    @id(map: "users_pkey") @default(autoincrement())
   name     String @unique(map: "users_name_key") @db.VarChar(50)
+  email    String @unique(map: "users_email_key") @db.VarChar(255)
   password String @db.VarChar(255)
   role_id  Int
   Role     Role   @relation(fields: [role_id], references: [id], onDelete: NoAction, onUpdate: NoAction, map: "users_role_id_fkey")
