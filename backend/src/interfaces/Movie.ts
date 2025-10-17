@@ -6,3 +6,4 @@ export default interface Movie {
   director?: string;
   release_year?: number;
 };
+
